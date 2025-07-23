@@ -1,5 +1,6 @@
 package com.mftadik.cryptoapp.dependencyinjection
 
+import com.mftadik.cryptoapp.repository.CryptoRepository
 import com.mftadik.cryptoapp.service.CryptoAPI
 import com.mftadik.cryptoapp.util.Constants.BASE_URL
 import dagger.Module
@@ -13,6 +14,12 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Singleton
+    @Provides
+    fun provideCryptoRepository(
+        api : CryptoAPI
+    ) = CryptoRepository(api)
 
 
     @Singleton
