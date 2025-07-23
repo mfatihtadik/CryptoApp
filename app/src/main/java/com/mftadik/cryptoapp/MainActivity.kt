@@ -21,7 +21,9 @@ import androidx.navigation.navArgument
 import com.mftadik.cryptoapp.ui.theme.CryptoAppTheme
 import com.mftadik.cryptoapp.view.CryptoDetailScreen
 import com.mftadik.cryptoapp.view.CryptoListScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
